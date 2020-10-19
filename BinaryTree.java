@@ -13,6 +13,13 @@ public class BinaryTree {
 			right=null;
 		}
 	}
+static void printTree(Node temp){
+		if(temp==null)
+			return;
+		printTree(temp.left);
+		System.out.println(temp.data);
+		printTree(temp.right);
+		}
 public static void main(String []args){
 		insert(root,5);
 		printTree(root);
